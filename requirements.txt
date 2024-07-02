@@ -1,0 +1,9 @@
+pandas
+SQLAlchemy
+plotly
+scikit-learn
+pandas-datareader
+yfinance
+dash
+dash-bootstrap-components
+azure-cosmos
