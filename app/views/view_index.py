@@ -9,9 +9,9 @@ from app.views.components import gridless_table
 
 register_page(__name__, path_template='/')
 
-labels = ['ポケモン名', 'タイプ', 'H', 'A', 'B', 'C', 'D', 'S', '特性']
-texts = ['ニャオハ', 'くさ', 40, 61, 54, 45, 45, 65, 'へんげんじざい']
-links = ['/Search', '', None, None, None, None, None, None, None]
+labels = ['DeviceName', 'Type', 'URL']
+texts = ['MAC-1', 'MAC', 'example.com']
+links = [None, None, '/Search']
 
 
 def layout():
