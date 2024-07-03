@@ -44,7 +44,7 @@ navbar = dbc.Container(
             dbc.Container(children=[
                 dbc.Row([
                     dbc.Col(dbc.Button(children=[html.I(className="bi bi-list le-0 h3")], id='show-sidebar', style={'border': '1px solid', 'border-color': 'secondary'})),
-                    dbc.Col(dbc.NavbarBrand(children=['データ分析システム'], className="ms-2", style={'color': 'secondary'})),
+                    dbc.Col(dbc.NavbarBrand(children=['データ分析システム'], className="ms-2", style={'color': 'secondary'}, href='/')),
                 ], align="center")
             ], fluid=True),
         ],
