@@ -16,7 +16,8 @@ def data_table_factory(df: pd.DataFrame, height: int=300) -> dbc.Container:
                 children=[
                     dash_table.DataTable(
                         data=df.to_dict('records'),
-                        columns=[{"name": i, "id": i} for i in df.columns],
+                        columns=[{'id': c, 'name': c,  'presentation': 'markdown'} for c in df.columns],
+                        css=[{"selector": "p", "rule": "margin: 0"}],
                         export_format='csv',
                         style_table={'height': f'{height}px', 'overflowY': 'auto', 'border': '1px solid #CCC'}
                     )
@@ -36,7 +37,7 @@ def icon_and_button_factory(button_name: str, ib_icon: str, id_name: str) -> dbc
 def rich_label_factory(
         title: str,
         text: str,
-        id_name: str,
+        id_name: str='',
         color: str='secondary',
         bg_color: str='primary',
         width: int=200) -> dbc.Card:

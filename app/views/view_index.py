@@ -19,8 +19,8 @@ def layout():
         dbc.Row([html.H1('Hone Page')]),
         dbc.Row([
             dbc.Col([rich_card_factory([
-                rich_label_factory('LotNo', '123ABC123', 'test-rich-label1'),
+                rich_label_factory('LotNo', '123ABC123'),
                 gridless_table(labels, texts, links)
             ])], width=6)
         ])
-    ])
+    ], fluid=True)

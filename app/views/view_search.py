@@ -21,7 +21,7 @@ register_page(__name__, path_template='/Search')
 
 
 def read_data() -> pd.DataFrame:
-    print('load iris')
+
     iris = load_iris()
     df = pd.DataFrame(iris.data, columns=iris.feature_names)
 
