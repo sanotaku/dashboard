@@ -43,12 +43,12 @@ navbar = dbc.Container(
         children=[
             dbc.Container(children=[
                 dbc.Row([
-                    dbc.Col(dbc.Button(children=[html.I(className="bi bi-list le-0 h3")], id='show-sidebar', style={'border': '1px solid', 'border-color': 'secondary'}), width="auto", align="center"),
+                    dbc.Col(dbc.Button(children=[html.I(className="bi bi-list le-0 h3")], id='show-sidebar', style={'border': '1px solid', 'border-color': 'secondary'})),
                     dbc.Col(dbc.NavbarBrand(children=['データ分析システム'], className="ms-2", style={'color': 'secondary'})),
-                ], align="center"),
-            ]),
+                ], align="center")
+            ], fluid=True),
         ],
-        color='primary', dark=True,
+        color='primary', dark=True, fixed='top', style={'box-shadow': '0px 1px 2px'}
     )
 )
 
@@ -59,8 +59,8 @@ content = page_container
 app.layout = dbc.Container([
     dcc.Location(id='my-location'),
     dbc.Row([
-        navbar, sidebar,
-        dbc.Col(content, width=12, md=6),
+        sidebar, navbar,
+        dbc.Col(content, width=12, style={'margin-top': '70px'}),
     ])
     ], fluid=True, class_name='mx-0 px-0'
 )
