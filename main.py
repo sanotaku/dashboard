@@ -2,9 +2,9 @@ from dash import Dash
 from dash import Input
 from dash import Output
 from dash import State
+from dash import dcc
 from dash import html
 from dash import page_container
-from dash import dcc
 import dash_bootstrap_components as dbc
 
 

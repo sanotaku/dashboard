@@ -1,5 +1,3 @@
-from dash import html
-from dash import dash_table
 from dash import register_page
 import dash_bootstrap_components as dbc
 import pandas as pd
@@ -8,7 +6,7 @@ from app.views.components import rich_card_factory
 from app.views.components import data_table_factory
 
 
-register_page(__name__, path_template='/MD')
+register_page(__name__, path_template='/MD', name='データ分析システム-MD確認')
 
 
 data = dict(

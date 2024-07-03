@@ -19,6 +19,8 @@ def data_table_factory(df: pd.DataFrame, height: int=300) -> dbc.Container:
                         columns=[{'id': c, 'name': c,  'presentation': 'markdown'} for c in df.columns],
                         css=[{"selector": "p", "rule": "margin: 0"}],
                         export_format='csv',
+                        sort_action='native',
+                        sort_mode='multi',
                         style_table={'height': f'{height}px', 'overflowY': 'auto', 'border': '1px solid #CCC'}
                     )
                 ],

@@ -7,7 +7,7 @@ from app.views.components import rich_card_factory
 from app.views.components import gridless_table
 
 
-register_page(__name__, path_template='/')
+register_page(__name__, path_template='/', name='データ分析システム')
 
 labels = ['DeviceName', 'Type', 'URL']
 texts = ['MAC-1', 'MAC', 'example.com']

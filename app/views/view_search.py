@@ -1,10 +1,10 @@
-from dash import register_page
 from dash import callback
+from dash import register_page
 from dash import dcc
+from dash import no_update
 from dash import Input
 from dash import Output
 from dash import State
-from dash import no_update
 from plotly.subplots import make_subplots
 import dash_bootstrap_components as dbc
 import plotly.graph_objects as go
@@ -17,7 +17,7 @@ from app.views.components import rich_card_factory
 from app.views.components import icon_and_button_factory
 
 
-register_page(__name__, path_template='/Search')
+register_page(__name__, path_template='/Search', name='データ分析システム-検索')
 
 
 def read_data() -> pd.DataFrame:
