@@ -33,6 +33,7 @@ sidebar = dbc.Offcanvas(
             genearte_button('検索', 'bi-search', '/Search'),
             genearte_button('MD確認', 'bi-filetype-md', '/MD'),
             genearte_button('工程状況', 'bi bi-bar-chart-steps', '/Process'),
+            genearte_button('テーブル', 'bi bi-bar-chart-steps', '/TableExample'),
         ]), fluid=True, class_name='mx-0 px-0'
     ), is_open=False, id='sidebar', style={'width': 300, 'margin': 0, 'padding': 0}
 )

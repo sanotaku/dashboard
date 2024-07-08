@@ -52,9 +52,9 @@ def rich_label_factory(
 
 def rich_card_factory(children: list, id_name=None) -> dbc.Card:
     if id_name:
-        return dbc.Card(children, class_name='m-2 p-2', style={'box-shadow': '1px 1px 4px'}, id=id_name)
+        return dbc.Card(children, class_name='m-1 p-1', style={'box-shadow': '1px 1px 4px'}, id=id_name)
     else:
-        return dbc.Card(children, class_name='m-2 p-2', style={'box-shadow': '1px 1px 4px'})
+        return dbc.Card(children, class_name='m-1 p-1', style={'box-shadow': '1px 1px 4px'})
 
 
 def gridless_table(labels: list, texts: list, links: Optional[list]=None) -> dbc.Container:
@@ -74,12 +74,12 @@ def gridless_table(labels: list, texts: list, links: Optional[list]=None) -> dbc
     for label, text, link in zip(labels, texts, links):
 
         if link == '' or link is None:
-            text_element = html.P(text, style={'font-size': '1em', 'margin-left': '50px'})
+            text_element = html.P(text, style={'font-size': '1em', 'margin-left': '50px'}, className='my-1')
         else:
-            text_element = html.A(html.P(text, style={'font-size': '1em', 'margin-left': '50px'}), href=link)
+            text_element = html.A(html.P(text, style={'font-size': '1em', 'margin-left': '50px'}, className='my-1'), href=link)
 
         record = html.Div([
-            html.P(label, className='p-0 m-0', style={'width': f'{max_len}em', 'color': 'gray', 'font-size': '1em'}),
+            html.P(label, className='p-0 my-1', style={'width': f'{max_len}em', 'color': 'gray', 'font-size': '1em'}),
             text_element
         ], style={'display': 'flex'})
 
